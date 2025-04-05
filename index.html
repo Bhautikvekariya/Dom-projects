@@ -1,0 +1,160 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+         background-color: #1a1a1a;
+         color: white;
+         text-align: center;
+    } 
+    .highlight{
+        background-color: yellow;
+        font-weight: bold;
+        color: #1a1a1a;
+    }
+    #citiesList{
+        text-decoration: none;
+    }
+    </style>
+</head>
+<body>
+    <section id="Example1">
+         <h4 class="highlight">Accessing DOM Elements</h4>
+         <p id="myparagraph">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint totam nobis aliquid!
+         </p>
+         <button id="changeTextBtn">
+            Change Text
+         </button>
+    </section>
+
+    <!-- Example 2 Traversing the dom -->
+     <section id="example-2">
+        <h2>Traversing the DOM</h2>
+        <ul id="citiesList">
+            <li>New york</li>
+            <li>Tokyo</li>
+            <li>ohaio</li>
+            <li>bangalor</li>
+        </ul>
+        <button id="highlightFirstCity">Highlight First City</button>
+     </section>
+
+     <!-- Example 3 Manipulating DOM Elements -->
+
+     <section id="example-3">
+        <h2>Manipulating DOM Elements</h2>
+        <div id="coffeOrder">Order: <span id="coffeeType">Latte</span></div>
+        <button id="changeOrder">Change Order to Espresso</button>
+     </section>
+
+     <!-- Example 4 Creating and Inserting Element -->
+      <section id="example-4">
+        <h2>Creating and Inserting Element</h2>
+        <button id="buttonAddItem">Add a New Item to the Shopping List</button>
+        <ul id="shoppingList">
+            <li>Bread</li>
+            <li>Milk</li>
+        </ul>
+      </section>
+
+      <!-- Example 5 Remove DOM Element  -->
+       <section id="example-5">
+        <h2>Remove DOM Element</h2>
+        <ul id="taskList">
+            <li>Task1</li>
+            <li>Task2</li>
+            <li>Task3</li>
+        </ul>
+        <button id="buttonRemoveItem">Remove Last Element</button>
+       </section>
+
+       <!-- Example 6 Event Delegation -->
+        <section id="example-6">
+            <h2>Event Delegation</h2>
+            <ul id="teaList">
+                <li class="teaItem">Green tea</li>
+                <li class="teaItem">Black tea</li>
+                <li class="teaItem">Oolong tea</li>
+            </ul>
+            <p>click on any tea to select it!</p>
+        </section>
+
+        <!-- Example 7 Form Handling -->
+        <section id="example-7">
+            <h2>Form Handling</h2>
+            <form id="feedbackForm">
+                <label for="feedbackInput">Your Feedback:</label>
+                <input type="text" id="feedbackInput" placeholder="Enter Feedback">
+                <button type="submit">Submit Feedback</button>
+            </form>
+            <p id="feedbackDisplay"></p>
+        </section>
+
+        <!-- Example 8 DOM Content Loaded -->
+         <section id="example-8">
+            <h2>DOM Content Loaded</h2>
+            <p id="domStatus">Waiting for DOM to Load...</p>
+         </section>
+    <script>
+        //  document.getElementById("changeTextBtn").addEventListener("click",function(){
+        // let para=document.getElementById("myparagraph").innerHTML="This is the new text";
+        //       console.log(para);
+        //  });
+
+        // document.getElementById("highlightFirstCity").addEventListener("click",function(){
+        //   let citiesList=  document.getElementById("citiesList");
+        //   citiesList.firstElementChild.classList.add("highlight");
+        // });
+
+        // document.getElementById("changeOrder").addEventListener("click",function(){
+        //     document.getElementById("coffeeType").textContent="Espresso";
+        //     document.getElementById("coffeeType").style.fontWeight="bold";
+        //     document.getElementById("coffeeType").style.backgroundColor="blue";
+        //     document.getElementById("coffeeType").style.padding="10px";
+        //     document.getElementById("coffeeType").style.borderRadius="5px";
+        //     document.getElementsById("coffeeType").syle.color="white";
+        //     document.getElementById("coffeeType").style.textAlign="center";
+        // });
+
+        // document.getElementById("buttonAddItem").addEventListener("click",function(){
+        //   let newItem=  document.createElement("li");
+        //   newItem.textContent="Eggs";
+        //     document.getElementById("shoppingList").appendChild(newItem);
+        // });
+
+        // document.getElementById("buttonRemoveItem").addEventListener("click",function(){
+        //    let remove= document.getElementById("taskList");
+        //       remove.lastElementChild.remove();
+        // });
+
+        document.getElementById("buttonAddItem").addEventListener("keyup",function(){
+                     alert("connected");
+        });
+
+        // document.getElementById("teaList").addEventListener("click",function(event){
+        //    if(event.target && event.target.matches(".teaItem")){
+        //     alert("You clicked on: " + event.target.textContent);
+        //    }
+        // });
+
+        // document.getElementById("feedbackForm").addEventListener("submit",function(event){
+        //     event.preventDefault();
+        //     let feedbackInput = document.getElementById("feedbackInput").value;
+        //     console.log(feedbackInput);
+
+        //     document.getElementById("feedbackDisplay").textContent = `Your feedback: ${feedbackInput}`;
+        //     document.getElementById("feedbackDisplay").style.color = "white";
+        //     document.getElementById("feedbackDisplay").style.backgroundColor = "#333";
+        //     document.getElementById("feedbackDisplay").style.border = "2px solid white";
+        //     document.getElementById("feedbackDisplay").style.padding="20px";
+        // });
+          document.addEventListener("DOMContentLoaded",function(){
+
+              document.getElementById("domStatus").textContent="Dom is fully Loaded and parsed";
+          })
+    </script>
+</body>
+</html>
